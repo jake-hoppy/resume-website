@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jake Hopkins - Resume</title>
+<style>
+    /* General Styles */
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #e0f0ff, #c6e0ff);
+        color: #1c1c1c;
+        scroll-behavior: smooth;
+    }
+
+    header {
+        background: linear-gradient(135deg, #1a4f8b, #2a6ebd);
+        color: white;
+        padding: 50px 20px;
+        text-align: center;
+        border-bottom-left-radius: 50% 20%;
+        border-bottom-right-radius: 50% 20%;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    nav {
+        background: #2a6ebd;
+        display: flex;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        border-radius: 0 0 20px 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+        color: white;
+        padding: 15px 25px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        transition: transform 0.3s, background 0.3s;
+        border-radius: 10px;
+        margin: 5px;
+    }
+
+    nav a:hover {
+        background: #1a4f8b;
+        transform: scale(1.1);
+    }
+
+    section {
+        max-width: 1000px;
+        margin: 60px auto;
+        padding: 0 20px;
+    }
+
+    h2 {
+        color: #1a4f8b;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+        font-size: 2em;
+        border-bottom: 3px solid #1a4f8b;
+        display: inline-block;
+        border-radius: 10px;
+        padding: 5px 10px;
+        background: rgba(255,255,255,0.5);
+    }
+
+    .tab-content {
+        display: none;
+        animation: fadeIn 0.7s ease;
+    }
+
+    .active {
+        display: block;
+    }
+
+    /* Card layout with curves and shadows */
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+
+    .card {
+        background: white;
+        border-radius: 20px;
+        padding: 25px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        transition: transform 0.4s, box-shadow 0.4s;
+        border-top: 5px solid #1a4f8b;
+    }
+
+    .card:hover {
+        transform: translateY(-10px) rotate(-1deg);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+    }
+
+    footer {
+        text-align: center;
+        padding: 30px;
+        background: #1a4f8b;
+        color: white;
+        margin-top: 50px;
+        border-top-left-radius: 50% 20%;
+        border-top-right-radius: 50% 20%;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        from {opacity: 0; transform: translateY(20px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+
+    a {
+        color: #1a4f8b;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Jake Hopkins</h1>
+    <p>Welcome to my professional portfolio</p>
+</header>
+
+<nav>
+    <a href="#" onclick="showTab('about')">About</a>
+    <a href="#" onclick="showTab('experience')">Experience</a>
+    <a href="#" onclick="showTab('projects')">Projects</a>
+    <a href="#" onclick="showTab('contact')">Contact</a>
+</nav>
+
+<section>
+    <!-- About -->
+    <div id="about" class="tab-content active">
+        <h2>About Me</h2>
+        <p>Hello! I am Jake Hopkins, a dedicated professional with expertise in Computer Science. I excel in my love for the field and am passionate about delivering results with creativity and precision.</p>
+    </div>
+
+    <!-- Experience -->
+    <div id="experience" class="tab-content">
+        <h2>Experience</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Master Control</h3>
+                <p>Master Control (2021-2022)</p>
+                <p>I helped to look in and test features. I helped with hardware as well whenever people needed help or had questions with computer interface</p>
+            </div>
+            <div class="card">
+                <h3>Sandbox</h3>
+                <p>Sandbox AI project manager (2024)</p>
+                <p>I helped out in the creation of a company that leaned into AI product management. </p>
+            </div>
+            <div class="card">
+                <h3>Job Title 3</h3>
+                <p>new job coming soon</p>
+                <p>coming soon</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects -->
+    <div id="projects" class="tab-content">
+        <h2>Projects</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Bots for football tickets</h3>
+                <p>I am a big fan of football. I learned how to use bots with C++ and set out to get group one to every game. I needed speed in order to do it and was able to use these bots to navigate the ticket website quickly and claim tickets.</p>
+            </div>
+            <div class="card">
+                <h3>AI word guessing</h3>
+                <p>I have always been a fan of word guessing games. There is one named Contexto that I always loved to play. I thought that the computer would be able to do it better than me so I used open source AI to create better guesses!</p>
+            </div>
+            <div class="card">
+                <h3>Project 3</h3>
+                <p>coming soon</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div id="contact" class="tab-content">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:jake@hopkinsmail.co">jake@hopkinsmail.co</a></p>
+        <p>LinkedIn: <a href="www.linkedin.com/in/jake-hopkins-b5b508330" target="_blank">My Profile</a></p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Jake Hopkins. All rights reserved.</p>
+</footer>
+
+<script>
+    function showTab(tabId) {
+        const tabs = document.querySelectorAll('.tab-content');
+        tabs.forEach(tab => tab.classList.remove('active'));
+        document.getElementById(tabId).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
